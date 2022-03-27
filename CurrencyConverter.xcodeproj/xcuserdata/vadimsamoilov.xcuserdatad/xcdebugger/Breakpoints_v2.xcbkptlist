@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F3F6744D-24C7-4407-98DD-2A4B366CD038"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C828031-F3C4-4767-8D2F-0A20F47CBA09"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency Converter/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "unwindTo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "191131C9-788B-4C96-BED6-C5BAF417A158"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency Converter/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency Converter/Controllers/SecondViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "SecondViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - 87456352dbed5911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.numberOfField.getter : Swift.Int"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - be95f0a90218b125"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.numberOfField.setter : Swift.Int"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - b4127d1b3b4db2c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.numberOfField.modify : Swift.Int"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - ef7161ec8fc2ed34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.numberOfField.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - 76627329f1d52235"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Currency_Converter.SecondViewController"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  uuid = "2CA131AF-7946-4E38-BDF6-A8E7BFA71C88 - 13088f0fd3c7abeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency_Converter.SecondViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Currency_Converter.SecondViewController&gt;"
+                  moduleName = "Currency Converter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vadimsamoilov/Desktop/singleview/Currency%20Converter/Currency%20Converter/Controllers/SecondViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
