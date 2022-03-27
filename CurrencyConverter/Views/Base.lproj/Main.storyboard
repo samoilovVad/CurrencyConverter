@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-kl-iAP">
+                                <rect key="frame" x="45.5" y="403" width="323.5" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-hh-18a">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Hj-Vr-Y3d"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ABk-WN-Q5H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-uC-xKb">
+                                        <rect key="frame" x="170" y="0.0" width="33.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QY7-ZU-wXx">
+                                        <rect key="frame" x="223.5" y="0.0" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VKl-uG-XrF"/>
+                                        </constraints>
+                                        <state key="normal" title="Select">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstButtonSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hx-JS-vEH"/>
+                                            <segue destination="KPV-v9-cio" kind="presentation" identifier="VC1" modalPresentationStyle="fullScreen" id="c7J-ts-wyp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gl0-Bq-f7E">
+                                <rect key="frame" x="46" y="463" width="322.5" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ly4-EX-jIb">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="FZY-YY-zfo"/>
+                                            <constraint firstAttribute="height" constant="50" id="gAi-kV-mFE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alb-Fi-egB">
+                                        <rect key="frame" x="170" y="0.0" width="32.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPf-Bz-5ce">
+                                        <rect key="frame" x="222.5" y="0.0" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ORz-ic-rR2"/>
+                                        </constraints>
+                                        <state key="normal" title="Select">
+                                            <color key="titleShadowColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondButtonSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Gh-vN-HEd"/>
+                                            <segue destination="KPV-v9-cio" kind="presentation" identifier="VC2" modalPresentationStyle="fullScreen" id="Otq-ee-ySD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgA-AF-1HZ">
+                                <rect key="frame" x="188.5" y="543" width="37.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gl0-Bq-f7E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FvV-Uc-9Sn"/>
+                            <constraint firstItem="MgA-AF-1HZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MkQ-QO-uqG"/>
+                            <constraint firstItem="MgA-AF-1HZ" firstAttribute="top" secondItem="gl0-Bq-f7E" secondAttribute="bottom" constant="30" id="ime-08-2PQ"/>
+                            <constraint firstItem="gl0-Bq-f7E" firstAttribute="top" secondItem="bgT-kl-iAP" secondAttribute="bottom" constant="10" id="kbt-Ws-qBd"/>
+                            <constraint firstItem="bgT-kl-iAP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="rjS-Qp-hwx"/>
+                            <constraint firstItem="bgT-kl-iAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwg-2V-3Oi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IqU-6G-KXZ"/>
+                    <connections>
+                        <outlet property="currencyLabelOne" destination="aCA-uC-xKb" id="tcY-aU-kku"/>
+                        <outlet property="currencyLabelTwo" destination="Alb-Fi-egB" id="JWf-9B-KgH"/>
+                        <outlet property="errorLabel" destination="MgA-AF-1HZ" id="kGs-gV-sX7"/>
+                        <outlet property="firstButtonSelect" destination="QY7-ZU-wXx" id="wJG-BJ-8yG"/>
+                        <outlet property="firstTextField" destination="0hY-hh-18a" id="HdW-Mf-3aE"/>
+                        <outlet property="secondButtonSelect" destination="MPf-Bz-5ce" id="3mA-hH-LU8"/>
+                        <outlet property="secondTextField" destination="ly4-EX-jIb" id="IV2-Eq-3Ed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="75"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="EBE-3C-1Eg">
+            <objects>
+                <viewController id="KPV-v9-cio" customClass="SecondViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fva-3o-f3E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-U7-eae">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-hv-ipb">
+                                <rect key="frame" x="173" y="576" width="68" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Choose"/>
+                                <connections>
+                                    <action selector="selectCurrency:" destination="KPV-v9-cio" eventType="touchUpInside" id="RnH-IH-j61"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-e9-d4z">
+                                <rect key="frame" x="57" y="254" width="300" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Khw-B4-z6b"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jmO-rz-X7F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ELo-hv-ipb" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="6Yr-Qe-Oca"/>
+                            <constraint firstItem="ELo-hv-ipb" firstAttribute="top" secondItem="pzh-U7-eae" secondAttribute="bottom" constant="20" id="9BL-uA-nhX"/>
+                            <constraint firstItem="pzh-U7-eae" firstAttribute="top" secondItem="LQS-e9-d4z" secondAttribute="bottom" constant="30" id="Eqs-ul-kdZ"/>
+                            <constraint firstItem="pzh-U7-eae" firstAttribute="centerY" secondItem="fva-3o-f3E" secondAttribute="centerY" id="aEJ-OX-uro"/>
+                            <constraint firstItem="pzh-U7-eae" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="ab2-pl-Che"/>
+                            <constraint firstItem="LQS-e9-d4z" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="hsH-Hx-yWX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jYd-ri-eFj"/>
+                    <connections>
+                        <outlet property="chooseButton" destination="ELo-hv-ipb" id="m3v-Eg-U7y"/>
+                        <outlet property="pickCurrency" destination="pzh-U7-eae" id="vO4-Zi-CBW"/>
+                        <outlet property="searchFilter" destination="LQS-e9-d4z" id="sfz-Nx-svn"/>
+                        <segue destination="jdf-aM-sqr" kind="unwind" identifier="goBack" unwindAction="unwindTo:" id="skd-Y5-hwR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Too-Za-7vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jdf-aM-sqr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1768.1159420289857" y="75"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Otq-ee-ySD"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
