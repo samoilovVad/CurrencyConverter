@@ -1,2 +1,5 @@
+#ignore all files .DS_Store
 CurrencyConverter/**/*.DS_Store
+
+#igonre INFO.md
 INFO.md
