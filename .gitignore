@@ -2,4 +2,4 @@
 CurrencyConverter/**/*.DS_Store
 
 #igonre INFO.md
-INFO.md
+/INFO.md
