@@ -15,6 +15,8 @@
 		EC28595F27B79E1000489545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC28595D27B79E1000489545 /* Main.storyboard */; };
 		EC28596127B79E1E00489545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC28596027B79E1E00489545 /* Assets.xcassets */; };
 		EC28596427B79E1E00489545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC28596227B79E1E00489545 /* LaunchScreen.storyboard */; };
+		EC60BE0527F9D9E500533F13 /* currencyData.json in Resources */ = {isa = PBXBuildFile; fileRef = EC60BE0427F9D9E500533F13 /* currencyData.json */; };
+		EC60BE0927F9F26100533F13 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60BE0827F9F26100533F13 /* CurrencyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EC28596027B79E1E00489545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC28596327B79E1E00489545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC28596527B79E1E00489545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC60BE0427F9D9E500533F13 /* currencyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currencyData.json; sourceTree = "<group>"; };
+		EC60BE0827F9F26100533F13 /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 				EC28595727B79E1000489545 /* AppDelegate.swift */,
 				EC28595927B79E1000489545 /* SceneDelegate.swift */,
 				EC0449AB27BC274A00156371 /* Model.swift */,
+				EC60BE0827F9F26100533F13 /* CurrencyData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,12 +94,21 @@
 		EC28595627B79E1000489545 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				EC60BE0327F9D97A00533F13 /* JSON */,
 				EC28596527B79E1E00489545 /* Info.plist */,
 				EC0449A927BC270F00156371 /* Model */,
 				EC0449AE27BC286300156371 /* Views */,
 				EC0449AA27BC271D00156371 /* Controllers */,
 			);
 			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		EC60BE0327F9D97A00533F13 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EC60BE0427F9D9E500533F13 /* currencyData.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +170,7 @@
 			files = (
 				EC28596427B79E1E00489545 /* LaunchScreen.storyboard in Resources */,
 				EC28596127B79E1E00489545 /* Assets.xcassets in Resources */,
+				EC60BE0527F9D9E500533F13 /* currencyData.json in Resources */,
 				EC28595F27B79E1000489545 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC60BE0927F9F26100533F13 /* CurrencyData.swift in Sources */,
 				EC0449AC27BC274A00156371 /* Model.swift in Sources */,
 				EC0449A727BC25E200156371 /* SecondViewController.swift in Sources */,
 				EC28595C27B79E1000489545 /* ViewController.swift in Sources */,
@@ -320,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VG4ZY7KN4;
-				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VG4ZY7KN4;
-				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -37,7 +37,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    let data = Data()
+    var currencyManager = CurrencyManager()
     public var change = true
     
     
@@ -58,11 +58,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         errorLabel.isHidden = true
         firstTextField.delegate = self
-        currencyLabelOne.text = data.currencies[0]
+        currencyLabelOne.text = currencyManager.currencies[0]
         
         
         secondTextField.delegate = self
-        currencyLabelTwo.text = data.currencies[1]
+        currencyLabelTwo.text = currencyManager.currencies[1]
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 //
@@ -91,8 +91,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        guard let currencyOneToCurrencyTwo = data.coefficient[(currencyLabelOne.text! + currencyLabelTwo.text!)] else {return}
-        guard let currencyTwoToCurrencyOne = data.coefficient[(currencyLabelTwo.text! + currencyLabelOne.text!)] else {return}
+        guard let currencyOneToCurrencyTwo = currencyManager.rate[(currencyLabelOne.text! + currencyLabelTwo.text!)] else {return}
+        guard let currencyTwoToCurrencyOne = currencyManager.rate[(currencyLabelTwo.text! + currencyLabelOne.text!)] else {return}
         if currencyLabelOne == currencyLabelTwo {
             
         }
@@ -106,6 +106,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 // MARK: hide the keyboard and apply changing
     func textFieldDidEndEditing(_ textField: UITextField) {
+        if let _ = textField.text {
+            currencyManager.fetchCurrencyRate(name: "usd.json")
+        }
         textFieldEditing(textField)
     }
 

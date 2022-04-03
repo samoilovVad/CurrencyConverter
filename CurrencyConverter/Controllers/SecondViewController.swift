@@ -12,7 +12,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     var text: String?
     public var numberOfField = 0
-    let data = Data()
+    let currencyManager = CurrencyManager()
 
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var pickCurrency: UIPickerView!
@@ -57,16 +57,16 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.currencies.count
+        return currencyManager.currencies.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let str = data.currencies[row]
+        let str = currencyManager.currencies[row]
         return str
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        text = data.currencies[row]
+        text = currencyManager.currencies[row]
     }
     
     @IBAction func selectCurrency(_ sender: Any) {
@@ -90,7 +90,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func search(_ searchBar: UISearchBar!) {
         guard let searchText = searchBar.text else {return}
         var count = 0
-        for i in data.currencies {
+        for i in currencyManager.currencies {
             if searchText == i {
                 pickCurrency.selectRow(count, inComponent: 1, animated: true)
             }
