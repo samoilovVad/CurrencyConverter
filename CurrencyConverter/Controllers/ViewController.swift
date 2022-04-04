@@ -93,22 +93,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         guard let currencyOneToCurrencyTwo = currencyManager.rate[(currencyLabelOne.text! + currencyLabelTwo.text!)] else {return}
         guard let currencyTwoToCurrencyOne = currencyManager.rate[(currencyLabelTwo.text! + currencyLabelOne.text!)] else {return}
-        if currencyLabelOne == currencyLabelTwo {
-            
-        }
+        
         let numb = Double(textField.text ?? "0.0")
+        //parse json when editing first text field
         if textField === firstTextField && firstTextField.text != "" {
+            currencyManager.fetchCurrencyRate(name: "\(currencyLabelOne.text!).json")
             secondTextField.text = String(format: "%.2f", (currencyOneToCurrencyTwo * numb!))
+        //parse json when editing second text field
         } else if secondTextField.text != "" {
+            currencyManager.fetchCurrencyRate(name: "\(currencyLabelTwo.text!).json")
             firstTextField.text = String(format: "%.2f", (currencyTwoToCurrencyOne * numb!))
         }
         
     }
 // MARK: hide the keyboard and apply changing
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let _ = textField.text {
-            currencyManager.fetchCurrencyRate(name: "usd.json")
-        }
         textFieldEditing(textField)
     }
 

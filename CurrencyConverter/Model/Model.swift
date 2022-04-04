@@ -43,16 +43,16 @@ struct CurrencyManager {
     func parseJSON(currencyData: Data) {
         let decoder = JSONDecoder()
         do {
-           let decodedData = try decoder.decode(CurrencyData.self, from: currencyData)
-           print(decodedData)
+            let decodedData = try decoder.decode(CurrencyData.self, from: currencyData)
+            print(decodedData.rub?.inverseRate)
         } catch {
             print(error)
         }
         
     }
-    let currencies = ["BYN 🇧🇾", "RUB 🇷🇺", "USD 🇺🇸", "EUR 🇪🇺"]
-    let rate = ["BYN 🇧🇾RUB 🇷🇺": 30.16, "BYN 🇧🇾USD 🇺🇸": 0.39, "BYN 🇧🇾EUR 🇪🇺": 0.34,
-                "RUB 🇷🇺BYN 🇧🇾": 0.033, "RUB 🇷🇺USD 🇺🇸": 0.013, "RUB 🇷🇺EUR 🇪🇺": 0.011,
-                "USD 🇺🇸BYN 🇧🇾": 3.3, "USD 🇺🇸RUB 🇷🇺": 77.44, "USD 🇺🇸EUR 🇪🇺": 0.88,
-                "EUR 🇪🇺BYN 🇧🇾": 2.91, "EUR 🇪🇺RUB 🇷🇺": 87.63, "EUR 🇪🇺USD 🇺🇸": 1.13]
+    let currencies = ["usd", "rub", "cad", "eur"]
+    let rate = ["cadrub": 30.16, "cadusd": 0.39, "cadeur": 0.34,
+                "rubcad": 0.033, "rubusd": 0.013, "rubeur": 0.011,
+                "usdcad": 3.3, "usdrub": 77.44, "usdeur": 0.88,
+                "eurcad": 2.91, "eurrub": 87.63, "eurusd": 1.13]
 }

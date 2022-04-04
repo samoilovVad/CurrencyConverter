@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Currency: Decodable {
+struct Currency: Codable {
     let code: String
     let alphaCode: String
     let numericCode: String
@@ -17,8 +17,10 @@ struct Currency: Decodable {
     let inverseRate: Double
 }
 
-struct CurrencyData: Decodable {
+struct CurrencyData: Codable {
     let eur: Currency?
+    let rub: Currency?
+    let usd: Currency?
 }
 
 
