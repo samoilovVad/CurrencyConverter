@@ -1,6 +1,6 @@
-#Requirements:
+# Requirements:
 
-##4 currencies are supported: BYN, EUR, RUB, USD. Exchange rates are static, hard code.
+## 4 currencies are supported: BYN, EUR, RUB, USD. Exchange rates are static, hard code.
 
 
 For example:<br>
@@ -9,9 +9,9 @@ For example:<br>
  - RUB/EUR = 10.0<br>
  - EUR/RUB = 9.09<br>
 
-##On the application launch screen, display the application name, author name and version.
+## On the application launch screen, display the application name, author name and version.
 
-###There are 2 screens: number input screen, currency selection screen.
+### There are 2 screens: number input screen, currency selection screen.
 
 
 The first screen contains 2 fields for entering the numeric value of the currency.
