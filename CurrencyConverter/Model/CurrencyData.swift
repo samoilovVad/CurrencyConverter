@@ -21,7 +21,7 @@ struct CurrencyData: Codable {
     let eur: Currency?
     let rub: Currency?
     let usd: Currency?
-    let cad: Currency?
+    let byn: Currency?
 }
 
 
