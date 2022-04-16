@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC" id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                         </state>
                                         <connections>
                                             <action selector="firstButtonSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hx-JS-vEH"/>
-                                            <segue destination="KPV-v9-cio" kind="presentation" identifier="VC1" modalPresentationStyle="fullScreen" id="c7J-ts-wyp"/>
+                                            <segue destination="ld9-aW-pJ5" kind="presentation" identifier="VC1" modalPresentationStyle="fullScreen" id="30w-Oq-d75"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,7 +78,7 @@
                                         </state>
                                         <connections>
                                             <action selector="secondButtonSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Gh-vN-HEd"/>
-                                            <segue destination="KPV-v9-cio" kind="presentation" identifier="VC2" modalPresentationStyle="fullScreen" id="Otq-ee-ySD"/>
+                                            <segue destination="ld9-aW-pJ5" kind="presentation" identifier="VC2" modalPresentationStyle="fullScreen" id="OXX-24-w50"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -116,64 +116,59 @@
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="75"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="EBE-3C-1Eg">
+        <!--View Controller Currency Pick-->
+        <scene sceneID="1z5-AM-U3y">
             <objects>
-                <viewController id="KPV-v9-cio" customClass="SecondViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fva-3o-f3E">
+                <viewController id="ld9-aW-pJ5" customClass="ViewControllerCurrencyPick" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R49-LG-LTi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-U7-eae">
-                                <rect key="frame" x="47" y="340" width="320" height="216"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-hv-ipb">
-                                <rect key="frame" x="173" y="576" width="68" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Choose"/>
-                                <connections>
-                                    <action selector="selectCurrency:" destination="KPV-v9-cio" eventType="touchUpInside" id="RnH-IH-j61"/>
-                                </connections>
-                            </button>
-                            <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-e9-d4z">
-                                <rect key="frame" x="57" y="254" width="300" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Khw-B4-z6b"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6of-iq-wg4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fav-VB-lQ2">
+                                    <rect key="frame" x="0.0" y="156" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Select"/>
+                                    <connections>
+                                        <action selector="buttonSelect" destination="ld9-aW-pJ5" eventType="touchUpInside" id="5ib-tV-usj"/>
+                                    </connections>
+                                </button>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="0Ln-Bt-53f">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Ln-Bt-53f" id="yrL-fY-BnG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="jmO-rz-X7F"/>
+                        <viewLayoutGuide key="safeArea" id="sy8-cx-cv7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ELo-hv-ipb" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="6Yr-Qe-Oca"/>
-                            <constraint firstItem="ELo-hv-ipb" firstAttribute="top" secondItem="pzh-U7-eae" secondAttribute="bottom" constant="20" id="9BL-uA-nhX"/>
-                            <constraint firstItem="pzh-U7-eae" firstAttribute="top" secondItem="LQS-e9-d4z" secondAttribute="bottom" constant="30" id="Eqs-ul-kdZ"/>
-                            <constraint firstItem="pzh-U7-eae" firstAttribute="centerY" secondItem="fva-3o-f3E" secondAttribute="centerY" id="aEJ-OX-uro"/>
-                            <constraint firstItem="pzh-U7-eae" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="ab2-pl-Che"/>
-                            <constraint firstItem="LQS-e9-d4z" firstAttribute="centerX" secondItem="fva-3o-f3E" secondAttribute="centerX" id="hsH-Hx-yWX"/>
+                            <constraint firstItem="sy8-cx-cv7" firstAttribute="bottom" secondItem="6of-iq-wg4" secondAttribute="bottom" id="78D-cJ-14O"/>
+                            <constraint firstItem="6of-iq-wg4" firstAttribute="leading" secondItem="sy8-cx-cv7" secondAttribute="leading" id="LmL-86-8FM"/>
+                            <constraint firstItem="6of-iq-wg4" firstAttribute="top" secondItem="sy8-cx-cv7" secondAttribute="top" id="u3i-mv-hRD"/>
+                            <constraint firstItem="sy8-cx-cv7" firstAttribute="trailing" secondItem="6of-iq-wg4" secondAttribute="trailing" id="yQm-DI-PSY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jYd-ri-eFj"/>
+                    <navigationItem key="navigationItem" id="sp1-e4-u7b"/>
                     <connections>
-                        <outlet property="chooseButton" destination="ELo-hv-ipb" id="m3v-Eg-U7y"/>
-                        <outlet property="pickCurrency" destination="pzh-U7-eae" id="vO4-Zi-CBW"/>
-                        <outlet property="searchFilter" destination="LQS-e9-d4z" id="sfz-Nx-svn"/>
-                        <segue destination="jdf-aM-sqr" kind="unwind" identifier="goBack" unwindAction="unwindTo:" id="skd-Y5-hwR"/>
+                        <outlet property="tableView" destination="6of-iq-wg4" id="SIQ-kd-aZw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Too-Za-7vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="jdf-aM-sqr" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf3-jw-Qdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.1159420289857" y="75"/>
+            <point key="canvasLocation" x="1838" y="75"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Otq-ee-ySD"/>
+        <segue reference="OXX-24-w50"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

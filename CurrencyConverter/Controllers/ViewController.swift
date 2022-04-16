@@ -64,17 +64,19 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "VC2", sender: self)
     }
     
-    @IBAction func unwindTo(_ unwindSegue: UIStoryboardSegue) {
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "VC1": let secondVC = segue.destination as! SecondViewController
+        case "VC1": let secondVC = segue.destination as! ViewControllerCurrencyPick
                     secondVC.numberOfField = 1
-        case "VC2": let secondVC = segue.destination as! SecondViewController
+                    secondVC.completionHandler = { text in
+                         self.currencyLabelOne.text = text
+            }
+        case "VC2": let secondVC = segue.destination as! ViewControllerCurrencyPick
                     secondVC.numberOfField = 2
-        default: _ = segue.destination as! SecondViewController
+                    secondVC.completionHandler = { text in
+                         self.currencyLabelTwo.text = text
+            }
+        default: _ = segue.destination as! ViewControllerCurrencyPick
         }
     }
 }
