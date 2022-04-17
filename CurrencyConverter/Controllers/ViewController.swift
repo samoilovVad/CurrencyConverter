@@ -67,12 +67,12 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "VC1": let secondVC = segue.destination as! ViewControllerCurrencyPick
-                    secondVC.numberOfField = 1
+                    self.change = true
                     secondVC.completionHandler = { text in
                          self.currencyLabelOne.text = text
             }
         case "VC2": let secondVC = segue.destination as! ViewControllerCurrencyPick
-                    secondVC.numberOfField = 2
+                    self.change = false
                     secondVC.completionHandler = { text in
                          self.currencyLabelTwo.text = text
             }
